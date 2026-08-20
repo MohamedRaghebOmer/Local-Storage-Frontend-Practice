@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage Practice</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <h1 class="header-label">Store Your Data</h1>
+    <main>
+      <div class="grid-container">
+        <div class="input-container">
+          <label for="nameTextbox" class="input-label">Name:</label>
+          <input
+            type="text"
+            id="nameTextbox"
+            class="input-textbox"
+            placeholder="Enter your name"
+          />
+          <button
+            type="button"
+            id="deleteNameButton"
+            class="secondary-button"
+            title="Delete name from local storage"
+          ></button>
+        </div>
+
+        <div class="input-container">
+          <label for="emailTextbox" class="input-label">Email:</label>
+          <input
+            type="text"
+            id="emailTextbox"
+            class="input-textbox"
+            placeholder="Enter your Email"
+          />
+          <button
+            type="button"
+            id="deleteEmailButton"
+            class="secondary-button"
+            title="Delete email from local storage"
+          ></button>
+        </div>
+
+        <div class="input-container">
+          <label for="favoriteColorTextbox" class="input-label"
+            >Favorite Color:</label
+          >
+          <input
+            type="text"
+            id="favoriteColorTextbox"
+            class="input-textbox"
+            placeholder="Enter your favorite color"
+          />
+          <button
+            type="button"
+            id="deleteFavoriteColorButton"
+            class="secondary-button"
+            title="Delete favorite color from local storage"
+          ></button>
+        </div>
+      </div>
+      <div class="action-buttons">
+        <button
+          type="button"
+          id="saveInLocalStorageButton"
+          class="primary-button"
+          title="Save in local storage"
+        >
+          Save in local storage
+        </button>
+
+        <button
+          type="button"
+          id="loadFromLocalStorageButton"
+          class="primary-button"
+          title="Load from local storage"
+        >
+          Load from local storage
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

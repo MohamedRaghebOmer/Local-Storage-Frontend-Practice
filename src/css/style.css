@@ -1,0 +1,421 @@
+/* ================================ */
+/* ========== CSS Reset =========== */
+/* ================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+
+  color: #1f2937;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(59, 130, 246, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(59, 130, 246, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(168, 85, 247, 0.15),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(168, 85, 247, 0.15),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #f8fafc, #eef2ff);
+
+  display: flex;
+  flex-direction: column;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ================================ */
+/* ========= Main Layout ========== */
+/* ================================ */
+
+main {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+
+  padding: 0 30px 40px;
+}
+
+/* ================================ */
+/* ========= Header Label ========= */
+/* ================================ */
+
+.header-label {
+  margin: 0;
+
+  padding: 45px 20px 35px;
+
+  color: #111827;
+
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 800;
+
+  text-align: center;
+
+  letter-spacing: -1.5px;
+
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* ================================ */
+/* ========= Grid Layout ========== */
+/* ================================ */
+
+.grid-container {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+
+  width: 100%;
+}
+
+/* ================================ */
+/* ========= Input Container ====== */
+/* ================================ */
+
+.input-container {
+  display: grid;
+
+  /*
+        Label | Textbox | Delete Button
+    */
+
+  grid-template-columns:
+    120px
+    minmax(0, 1fr)
+    40px;
+
+  align-items: center;
+
+  column-gap: 15px;
+
+  width: 100%;
+
+  min-height: 74px;
+
+  padding: 15px;
+
+  background-color: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid rgba(148, 163, 184, 0.25);
+
+  border-radius: 14px;
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.input-container:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(59, 130, 246, 0.3);
+
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+/* ================================ */
+/* ========= Input Label ========== */
+/* ================================ */
+
+.input-label {
+  color: #1e3a8a;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* ================================ */
+/* ========= Input Textbox ======== */
+/* ================================ */
+
+.input-textbox {
+  width: 100%;
+
+  min-width: 0;
+  min-height: 42px;
+
+  padding: 8px 12px;
+
+  border: 2px solid #d1d5db;
+  border-radius: 9px;
+
+  background-color: #ffffff;
+
+  color: #111827;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.input-textbox::placeholder {
+  color: #9ca3af;
+}
+
+.input-textbox:hover {
+  border-color: #9ca3af;
+}
+
+.input-textbox:focus {
+  border-color: #2563eb;
+
+  background-color: #ffffff;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* ================================ */
+/* ======== Primary Buttons ======= */
+/* ================================ */
+
+.action-buttons {
+  margin-top: 35px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.primary-button {
+  min-width: 160px;
+  min-height: 46px;
+
+  padding: 10px 22px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  text-align: center;
+
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.22);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primary-button:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 9px 20px rgba(37, 99, 235, 0.3);
+}
+
+.primary-button:active {
+  transform: translateY(0);
+
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+.primary-button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 3px;
+}
+
+/* ================================ */
+/* ======= Secondary Button ======= */
+/* ================================ */
+
+.secondary-button {
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
+
+  border: 2px solid #ef4444;
+  border-radius: 9px;
+
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.secondary-button::before {
+  content: "";
+
+  width: 19px;
+  height: 19px;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ef4444' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 6h18'/%3E%3Cpath d='M8 6V4h8v2'/%3E%3Cpath d='M19 6l-1 14H6L5 6'/%3E%3Cpath d='M10 11v5'/%3E%3Cpath d='M14 11v5'/%3E%3C/svg%3E");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.secondary-button:hover {
+  background-color: #ef4444;
+  border-color: #ef4444;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 14px rgba(239, 68, 68, 0.25);
+}
+
+.secondary-button:hover::before {
+  filter: brightness(0) invert(1);
+}
+
+.secondary-button:active {
+  transform: translateY(0);
+
+  box-shadow: none;
+}
+
+.secondary-button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+.secondary-button:focus-visible {
+  outline: 3px solid rgba(239, 68, 68, 0.2);
+  outline-offset: 3px;
+}
+
+/* ================================ */
+/* ========== Responsive ========== */
+/* ================================ */
+
+/* 2 columns */
+@media (max-width: 1150px) {
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 1 column */
+@media (max-width: 760px) {
+  main {
+    padding: 0 20px 30px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small screens */
+@media (max-width: 520px) {
+  .header-label {
+    padding: 30px 15px 25px;
+
+    font-size: 2.3rem;
+  }
+
+  main {
+    padding: 0 12px 25px;
+  }
+
+  .grid-container {
+    gap: 14px;
+  }
+
+  .input-container {
+    grid-template-columns:
+      105px
+      minmax(0, 1fr)
+      40px;
+
+    column-gap: 12px;
+
+    padding: 12px;
+  }
+
+  .input-label {
+    font-size: 14px;
+  }
+
+  .action-buttons {
+    margin-top: 25px;
+
+    gap: 12px;
+  }
+
+  .primary-button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
